@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-menu-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container-output {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 80px;
+}
