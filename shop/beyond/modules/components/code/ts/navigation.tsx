@@ -1,17 +1,34 @@
 import React from "react";
-import { useState } from "react";
-import { Balls } from './categories/balls';
-import { Clothes } from './categories/clothes';
-import { Consoles } from './categories/consoles';
-import { Drinks } from './categories/drinks';
-import { Foods } from './categories/foods';
-import { Home } from './categories/home';
-import { Telephones } from './categories/telephones';
-import { Tools } from './categories/tools';
+import { useState, useEffect } from "react";
+import { ComponentProduct } from "./component-product";
 
 export /*bundle*/ const Navigation = () => {
 
+  const [arrayProducts, setArrayProducts] = useState([])
   const [componentProduct, setComponentProduct] = useState(null);
+
+  const getCategorieHome = arrayProducts.filter(product => product.categories === "home" );
+  const getCategorieDrinks = arrayProducts.filter(product => product.categories === "drinks");
+  const getCategorieBalls = arrayProducts.filter(product => product.categories === "balls");
+  const getCategorieConsoles = arrayProducts.filter(product => product.categories === "consoles");
+  const getCategorieFoods = arrayProducts.filter(product => product.categories === "consoles");
+
+  const showCategorieHome = getCategorieHome.map(product => <ComponentProduct product={product.name} brand={product.brand} price={product.price} src={product.src} categories={product.categories} />);
+  const showCategorieDrinks = getCategorieDrinks.map(product => <ComponentProduct product={product.name} brand={product.brand} price={product.price} src={product.src} categories={product.categories} />);
+  const showCategorieBalls = getCategorieBalls.map(product => <ComponentProduct product={product.name} brand={product.brand} price={product.price} src={product.src} categories={product.categories} />);
+  const showCategorieConsoles = getCategorieConsoles.map(product => <ComponentProduct product={product.name} brand={product.brand} price={product.price} src={product.src} categories={product.categories} />);
+  const showCategorieFoods = getCategorieFoods.map(product => <ComponentProduct product={product.name} brand={product.brand} price={product.price} src={product.src} categories={product.categories} />);
+
+  async function getDataWithFetch() {
+    const response = await fetch('https://my-json-server.typicode.com/Gabojcb/packages.exercises/products');
+    const data = await response.json();
+    setArrayProducts(data);
+    console.log(data);
+  }
+
+  useEffect(()=> {
+    getDataWithFetch();
+  },[])
 
   const handleClick = (component) => {
     setComponentProduct(component);
@@ -49,15 +66,11 @@ export /*bundle*/ const Navigation = () => {
         </ul>
       </nav>
       <div className="flex-product">
-      {componentProduct === "Foods" && <Foods />}
-      {componentProduct === "Drinks" && <Drinks />}
-      {componentProduct === "Clothes" && <Clothes />}
-      {componentProduct === "Balls" && <Balls />}
-      {componentProduct === "Drinks" && <Drinks />}
-      {componentProduct === "Telephones" && <Telephones />}
-      {componentProduct === "Consoles" && <Consoles />}
-      {componentProduct === "Tools" && <Tools />}
-      {componentProduct === "Home" && <Home />}
+        {componentProduct === "Home" && showCategorieHome}
+        {componentProduct === "Drinks" && showCategorieDrinks}
+        {componentProduct === "Balls" && showCategorieBalls}
+        {componentProduct === "Consoles" && showCategorieConsoles}
+        {componentProduct === "Foods" && showCategorieFoods}
       </div>
     </>
   );
