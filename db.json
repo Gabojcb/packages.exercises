@@ -1,172 +1,245 @@
 {
     "products": [
-        {       
-            "id":1,
+        {
+            "id": 1,
             "name": "Bed",
             "price": "none",
             "src": "images/images-shop-real/hogar/cama.png",
             "categories": "home"
         },
-        {       
-            "id":2,
-            "name":"Oven",
+        {
+            "id": 2,
+            "name": "Oven",
             "brand": "Midea",
             "price": "80$",
             "src": "images/images-shop-real/hogar/horno-lg.png",
-            "categories":"home"
-        },
-        {       
-            "id":3,
-            "name":"Lamp",
-            "brand": "Eufy",
-            "price": "30$",
-            "src":"images/images-shop-real/hogar/lampara-italiana.png",
             "categories": "home"
         },
-        {       
-            "id":4,
-            "name":"Table",
+        {
+            "id": 3,
+            "name": "Lamp",
+            "brand": "Eufy",
+            "price": "30$",
+            "src": "images/images-shop-real/hogar/lampara-italiana.png",
+            "categories": "home"
+        },
+        {
+            "id": 4,
+            "name": "Table",
             "brand": "Hogare",
             "price": "100$",
             "src": "images/images-shop-real/hogar/mesa-comedor.png",
             "categories": "home"
         },
-        {       
-            "id":5,
-            "name":"Fridge",
+        {
+            "id": 5,
+            "name": "Fridge",
             "brand": "LG",
             "price": "200$",
             "src": "images/images-shop-real/hogar/nevera-lg.png",
             "categories": "home"
-        }, 
-        {       
-            "id":6,
+        },
+        {
+            "id": 6,
             "name": "Chairs",
             "brand": "none",
             "price": "60$",
             "src": "images/images-shop-real/hogar/sillas-de-hogar.png",
             "categories": "home"
         },
-        {       
-            "id":7,
-            "name":"Couch",
+        {
+            "id": 7,
+            "name": "Couch",
             "brand": "Cardiff",
             "price": "95$",
             "src": "images/images-shop-real/hogar/sofa-cardiff.png",
             "categories": "home"
         },
-        {       
-            "id":8,
-            "name":"Tv",
+        {
+            "id": 8,
+            "name": "Tv",
             "brand": "Samsung",
             "price": "167$",
-            "src":"images/images-shop-real/hogar/tv-samsung.png",
+            "src": "images/images-shop-real/hogar/tv-samsung.png",
             "categories": "home"
         },
-        {   
-            "id":9,
-            "name":"Ball soccer",
+        {
+            "id": 9,
+            "name": "Ball soccer",
             "brand": "Nike",
             "price": "45$",
-            "src":"images/images-shop-real/balls/balon-de-futbol.png",
-            "categories":"balls"
-        },
-        {   
-            "id":10,
-            "name":"Ball soccer",
-            "brand": "Mikasa",
-            "price": "50$",
-            "src":"images/images-shop-real/balls/balon-futbol.png",
+            "src": "images/images-shop-real/balls/balon-de-futbol.png",
             "categories": "balls"
         },
-        {   "id": 11,
-            "name":"Ps5",
-            "brand":"Sony",
-            "price":"900$",
-            "src":"images/images-shop-real/consolas/ps5.png",
-            "categories":"consoles"
+        {
+            "id": 10,
+            "name": "Ball soccer",
+            "brand": "Mikasa",
+            "price": "50$",
+            "src": "images/images-shop-real/balls/balon-futbol.png",
+            "categories": "balls"
         },
-        {  
-             "id": 12,
-            "name":"Psp",
-            "brand":"Sony",
-            "price":"100$",
-            "src":"images/images-shop-real/consolas/psp.png",
-            "categories":"consoles"
+        {
+            "id": 11,
+            "name": "Ps5",
+            "brand": "Sony",
+            "price": "900$",
+            "src": "images/images-shop-real/consolas/ps5.png",
+            "categories": "consoles"
         },
-        {   
+        {
+            "id": 12,
+            "name": "Psp",
+            "brand": "Sony",
+            "price": "100$",
+            "src": "images/images-shop-real/consolas/psp.png",
+            "categories": "consoles"
+        },
+        {
             "id": 13,
-            "name":"switch",
-            "brand":"Nintendo",
-            "price":"500$",
-            "src":"images/images-shop-real/consolas/switch.png",
-            "categories":"consoles"
+            "name": "switch",
+            "brand": "Nintendo",
+            "price": "500$",
+            "src": "images/images-shop-real/consolas/switch.png",
+            "categories": "consoles"
         },
-        {   
+        {
             "id": 14,
-            "name":"Xbox 360",
-            "brand":"Microsoft",
-            "price":"120$",
-            "src":"images/images-shop-real/consolas/xbox-360.png",
-            "categories":"consoles"
+            "name": "Xbox 360",
+            "brand": "Microsoft",
+            "price": "120$",
+            "src": "images/images-shop-real/consolas/xbox-360.png",
+            "categories": "consoles"
         },
-        {   
+        {
             "id": 15,
-            "name":"Xbox one",
-            "brand":"Microsoft",
-            "price":"600$",
-            "src":"images/images-shop-real/consolas/xbox-one.png",
-            "categories":"consoles"
+            "name": "Xbox one",
+            "brand": "Microsoft",
+            "price": "600$",
+            "src": "images/images-shop-real/consolas/xbox-one.png",
+            "categories": "consoles"
         },
-        {   
+        {
             "id": 16,
-            "name":"Smoothie",
-            "brand":"None",
-            "price":"1.5$",
-            "src":"images/images-shop-real/bebidas/batidos-fresa.png",
-            "categories":"drinks"
+            "name": "Smoothie",
+            "brand": "None",
+            "price": "1.5$",
+            "src": "images/images-shop-real/bebidas/batidos-fresa.png",
+            "categories": "drinks"
         },
-        {  
-             "id": 17,
-            "name":"Coca-cola",
-            "brand":"None",
-            "price":"1.2$",
-            "src":"images/images-shop-real/bebidas/bebida-coca-cola.png",
-            "categories":"drinks"
+        {
+            "id": 17,
+            "name": "Coca-cola",
+            "brand": "None",
+            "price": "1.2$",
+            "src": "images/images-shop-real/bebidas/bebida-coca-cola.png",
+            "categories": "drinks"
         },
-        {   
+        {
             "id": 18,
-            "name":"Malta",
-            "brand":"Venezolana",
-            "price":"1.2$",
-            "src":"images/images-shop-real/bebidas/malta-venezolana.png",
-            "categories":"drinks"
-        },   
-        {   
+            "name": "Malta",
+            "brand": "Venezolana",
+            "price": "1.2$",
+            "src": "images/images-shop-real/bebidas/malta-venezolana.png",
+            "categories": "drinks"
+        },
+        {
             "id": 19,
-            "name":"Pepsi",
-            "brand":"Pepsi",
-            "price":"2.2$",
-            "src":"images/images-shop-real/bebidas/pepsi.png",
-            "categories":"drinks"
+            "name": "Pepsi",
+            "brand": "Pepsi",
+            "price": "2.2$",
+            "src": "images/images-shop-real/bebidas/pepsi.png",
+            "categories": "drinks"
         },
-        {   
+        {
             "id": 20,
-            "name":"Arepa",
-            "brand":"None",
-            "price":"3$",
-            "src":"images/images-shop-real/comidas/arepa-venezolana.png",
-            "categories":"foods"
+            "name": "Arepa",
+            "brand": "None",
+            "price": "3$",
+            "src": "images/images-shop-real/comidas/arepa-venezolana.png",
+            "categories": "foods"
         },
-        {   
+        {
             "id": 21,
-            "name":"Arroz",
-            "brand":"None",
-            "price":"2.2$",
-            "src":"images/images-shop-real/comidas/arroz-con-salchicas.png",
-            "categories":"foods"
+            "name": "Arroz",
+            "brand": "None",
+            "price": "2.2$",
+            "src": "images/images-shop-real/comidas/arroz-con-salchicas.png",
+            "categories": "foods"
+        },
+        {
+            "id": 22,
+            "name": "Flashlight",
+            "brand": "None",
+            "price": "3.8$",
+            "src": "images/images-shop-real/herramientas/linterna.png",
+            "categories": "tools"
+        },
+        {
+            "id": 23,
+            "name": "Hammer",
+            "brand": "None",
+            "price": "4$",
+            "src": "images/images-shop-real/herramientas/martillo.png",
+            "categories": "tools"
+        },
+        {
+            "id": 24,
+            "name": "Shovel",
+            "brand": "None",
+            "price": "3$",
+            "src": "images/images-shop-real/herramientas/pala.png",
+            "categories": "tools"
+        },
+        {
+            "id": 25,
+            "name": "Infinix hot",
+            "brand": "Infinix",
+            "price": "120$",
+            "src": "images/images-shop-real/telefonos/infinix-hot9.png",
+            "categories": "telephones"
+        },
+        {
+            "id": 26,
+            "name": "Retmi Note",
+            "brand": "Xiaomi",
+            "price": "170$",
+            "src": "images/images-shop-real/telefonos/retmi-note11.png",
+            "categories": "telephones"
+        },
+        {
+            "id": 27,
+            "name": "Samsung A32",
+            "brand": "Samsung",
+            "price": "250$",
+            "src": "images/images-shop-real/telefonos/samsung-a32.png",
+            "categories": "telephones"
+        },
+        {
+            "id": 28,
+            "name": "Blue Shirt",
+            "brand": "None",
+            "price": "15$",
+            "src": "images/images-shop-real/ropas/camisa-azul.png",
+            "categories": "clothes"
+        },
+        {
+            "id": 29,
+            "name": "Cap",
+            "brand": "Nike",
+            "price": "45$",
+            "src": "images/images-shop-real/ropas/gorra-nike.png",
+            "categories": "clothes"
+        },
+        {
+            "id": 30,
+            "name": "Shoes",
+            "brand": "Jordan",
+            "price": "50$",
+            "src": "images/images-shop-real/ropas/zapatos-jordan.png",
+            "categories": "clothes"
         }
-],
+    ],
     "categories": [
         {
             "id": 1,
