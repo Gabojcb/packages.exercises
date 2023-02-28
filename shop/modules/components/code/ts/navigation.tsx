@@ -1,10 +1,12 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { ComponentProduct } from "./component-product";
+import { ProductForm } from "./product-form";
 
 export /*bundle*/ const Navigation = () => {
   const [arrayProducts, setArrayProducts] = useState([]);
   const [componentProduct, setComponentProduct] = useState(null);
+  const [isCLick, setIsClick] = useState(false);
 
   async function getDataWithFetch() {
     const response = await fetch("https://my-json-server.typicode.com/Gabojcb/packages.exercises/products");
@@ -33,6 +35,10 @@ export /*bundle*/ const Navigation = () => {
       />
     ));
 
+  const handleClickChange = () => {
+    setIsClick(true);
+  };
+
   return (
     <>
       <nav>
@@ -60,14 +66,13 @@ export /*bundle*/ const Navigation = () => {
               </li>
             </ul>
           </li>
-          <li className="color">
-            <a href="#footer-id" className="anchorage">
-              Contact
-            </a>
+          <li className="color" onClick={() => handleClickChange()}>
+            Add Products
           </li>
         </ul>
       </nav>
       <div className="flex-product">{componentProduct && getProductComponentsByCategory(componentProduct)}</div>
+      <div className="container-form">{isCLick === true && <ProductForm />}</div>
     </>
   );
 };
