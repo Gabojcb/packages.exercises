@@ -1,13 +1,33 @@
 import * as React from "react";
 import { useState } from "react";
 
+interface IForm {
+  name: string;
+  price: string;
+  src: string;
+  brand: string;
+  category: string;
+}
+
 export /*bundle*/ const ProductForm = () => {
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [brand, setBrand] = useState("");
-  const [src, setSrc] = useState("");
-  const [category, setCategoty] = useState("");
-  const [formData, setFormData] = useState({});
+  const specs: IForm = {
+    name: "",
+    price: "",
+    src: "",
+    brand: "",
+    category: "",
+  };
+  const [formData, setFormData] = useState<IForm>(specs);
+
+  const { name, price, src, brand, category } = formData;
+
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
   const handleVerifyData = (e) => {
     e.preventDefault();
@@ -18,101 +38,71 @@ export /*bundle*/ const ProductForm = () => {
   };
 
   return (
-    <form className="form__products" onSubmit={handleVerifyData}>
-      <p className="form__description">Add your product data</p>
+    <article>
+      <h2 className="form__description">Add your product data</h2>
 
-      <div className="container-input">
-        <div>
+      <form className="form__products" onSubmit={handleVerifyData}>
+        <section>
           <label className="description">Name</label>
           <input
             name="name"
             type="text"
             className="form__input"
-            onChange={(e) => {
-              setName(e.target.value);
-              setFormData({
-                ...formData,
-                [e.target.name]: e.target.value,
-              });
-            }}
+            onChange={onChange}
             value={name}
             placeholder="product name"
           />
-        </div>
+        </section>
 
-        <div>
+        <section>
           <label className="description">Price</label>
           <input
             name="price"
             type="number"
             className="form__input"
-            onChange={(e) => {
-              setPrice(e.target.value);
-              setFormData({
-                ...formData,
-                [e.target.name]: e.target.value,
-              });
-            }}
+            onChange={onChange}
             value={price}
             placeholder="product price"
           />
-        </div>
+        </section>
 
-        <div>
+        <section>
           <label className="description">Brand</label>
           <input
             name="brand"
             type="text"
             className="form__input"
-            onChange={(e) => {
-              setBrand(e.target.value);
-              setFormData({
-                ...formData,
-                [e.target.name]: e.target.value,
-              });
-            }}
+            onChange={onChange}
             value={brand}
             placeholder="product brand"
           />
-        </div>
+        </section>
 
-        <div>
+        <section>
           <label className="description">Src</label>
           <input
             name="src"
             type="text"
             className="form__input"
-            onChange={(e) => {
-              setSrc(e.target.value);
-              setFormData({
-                ...formData,
-                [e.target.name]: e.target.value,
-              });
-            }}
+            onChange={onChange}
             value={src}
             placeholder="product src"
           />
-        </div>
+        </section>
 
-        <div>
+        <section>
           <label className="description">Category</label>
           <input
             name="category"
             type="text"
             className="form__input"
-            onChange={(e) => {
-              setCategoty(e.target.value);
-              setFormData({
-                ...formData,
-                [e.target.name]: e.target.value,
-              });
-            }}
+            onChange={onChange}
             value={category}
             placeholder="product category"
           />
-        </div>
+        </section>
         <button className="form__button-send">send</button>
-      </div>
-    </form>
+      </form>
+    </article>
   );
 };

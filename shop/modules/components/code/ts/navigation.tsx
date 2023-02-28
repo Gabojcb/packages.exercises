@@ -72,7 +72,7 @@ export /*bundle*/ const Navigation = () => {
         </ul>
       </nav>
       <div className="flex-product">{componentProduct && getProductComponentsByCategory(componentProduct)}</div>
-      <div className="container-form">{isCLick === true && <ProductForm />}</div>
+      <div className="form__container">{isCLick === true && <ProductForm />}</div>
     </>
   );
 };
