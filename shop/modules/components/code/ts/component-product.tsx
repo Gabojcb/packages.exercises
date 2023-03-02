@@ -1,21 +1,31 @@
 import * as React from "react";
 
-export /*bundle*/ const ComponentProduct = ({ product, brand, price, src, categories }) => {
+interface IProduct {
+  key: string;
+  name: string;
+  brand: string;
+  price: string;
+  src: string;
+  category: string;
+}
+
+export /*bundle*/ const Product = (props: IProduct) => {
+  const { name, brand, price, src, category } = props;
   return (
     <div className="container">
       <div className="product">
         <div className="container__image">
-          <img className="product__image" src={src} alt={product} />
+          <img className="product__image" src={src} alt={name} />
         </div>
         <div className="container__info">
           <p className="data">
-            Product: <span className="key-product">{product}</span>
+            Product: <span className="key-product">{name}</span>
           </p>
           <p className="data">
             Brand: <span className="key-product">{brand}</span>
           </p>
           <p className="data">
-            Categorie: <span className="key-product">{categories}</span>
+            Categorie: <span className="key-product">{category}</span>
           </p>
           <p className="data">
             Price: <span className="key-product">{price}</span>

@@ -1,43 +1,57 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { ComponentProduct } from "./component-product";
+import { Product } from "./component-product";
 import { ProductForm } from "./product-form";
 
+interface IProducts {
+  key: string;
+  product: string;
+  brand: string;
+  price: string;
+  src: string;
+  category: string;
+}
+
 export /*bundle*/ const Navigation = () => {
-  const [arrayProducts, setArrayProducts] = useState([]);
+  const [products, setProducts] = useState([]);
   const [componentProduct, setComponentProduct] = useState(null);
-  const [isCLick, setIsClick] = useState(false);
+  const [isCLicked, setIsClick] = useState(false);
 
   async function getDataWithFetch() {
     const response = await fetch("https://my-json-server.typicode.com/Gabojcb/packages.exercises/products");
-    const data = await response.json();
-    setArrayProducts(data);
+    const data: IProducts[] = await response.json();
+    setProducts(data);
   }
   useEffect(() => {
     getDataWithFetch();
   }, []);
 
-  const getProductsByCategory = (category) => arrayProducts.filter((product) => product.categories === category);
-
-  const handleCategoryClick = (category) => {
-    setComponentProduct(category);
+  const specs: IProducts = {
+    key: "",
+    product: "",
+    price: "",
+    src: "",
+    brand: "",
+    category: "",
   };
+
+  const getProductsByCategory = (category) => products.filter((product) => product.category === category);
+
+  const handleCategoryClick = (category) => setComponentProduct(category);
 
   const getProductComponentsByCategory = (category) =>
     getProductsByCategory(category).map((product) => (
-      <ComponentProduct
+      <Product
         key={product.name}
-        product={product.name}
+        name={product.name}
         brand={product.brand}
         price={product.price}
         src={product.src}
-        categories={product.categories}
+        category={product.category}
       />
     ));
 
-  const handleClickChange = () => {
-    setIsClick(true);
-  };
+  const handleClickChange = () => setIsClick(true);
 
   return (
     <>
@@ -66,13 +80,13 @@ export /*bundle*/ const Navigation = () => {
               </li>
             </ul>
           </li>
-          <li className="color" onClick={() => handleClickChange()}>
+          <li className="color" onClick={handleClickChange}>
             Add Products
           </li>
         </ul>
       </nav>
       <div className="flex-product">{componentProduct && getProductComponentsByCategory(componentProduct)}</div>
-      <div className="form__container">{isCLick === true && <ProductForm />}</div>
+      <div className="form__container">{isCLicked === true && <ProductForm />}</div>
     </>
   );
 };
