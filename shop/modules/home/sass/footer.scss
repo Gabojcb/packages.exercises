@@ -2,46 +2,137 @@
     background-color: #24252a;
     display: flex;
     flex-direction: column;
+    // background-image: url(images/footer-image.png);
+    background-position: 70%  100%;
+    background-size: cover;
+    height: 1000px;
   
     color: #fff;
   
     .space-networks {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
+
+      .sing-up {
+        display: flex;
+        margin-top: 50px;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 2px solid #fff;
+        
+        >div {
+          width: 40%;
+          font-size: 20px;
+        }
+
+        >input {
+          margin-right: 20px;
+          height: 50px;
+          width: 220px;
+          border-radius: 25px;
+          font-size: 18px;
+          padding: 10px;
+        }
+
+        >button {
+          height: 50px;
+          font-size: 24px;
+          width: 180px;
+          border-radius: 25px;
+          color: #fff;
+          background-color: #008849;
+          transition: all .3s;
+
+          &:hover {
+            background-color: #1ca364;
+          }
+
+          &:active {
+            font-size: 20px;
+          }
+        }
+
+      }
+
+      .links {
+        display: flex;
+        margin-top: 40px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        height: 300px;
+        border-bottom: 2px solid #fff;
+
+        
+        >div>h3 {
+          font-size: 30px;
+          color: #008849;
+          >&:hover{
+              color: #008849;
+            }
+        }
+      }
+
+      .networks {
+        margin-top: 30px;
+        background-color: #fff;
+        height: 300px;
+        width: 80%;
+        border-radius: 20px;
+      }
+
     }
     .message__infor {
       margin-top: 30px;
       font-weight: 600;
       text-align: center;
       font-size: 34px;
+      color: #008849;
     }
   
-    .flex {
-      margin: 30px;
-      display: flex;
-      align-items: center;
-    }
-  
-    .images-footer {
-      height: 70px;
-      margin: 10px;
-    }
+        .networks{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          >.networks__logo {
+            height: 40px;
+          }
+
+          .networks__flex-row {
+            display: flex;
+            color: #24252a;
+            align-items: center;
+            background-color: #008849;
+            border-radius: 13px;
+            >.networks__logo {
+              height: 40px;
+            }
+          }
+        }
   
     .rights {
       display: flex;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       justify-content: center;
       align-items: center;
+      margin-top: 20px;
+      border-top: #fff solid;
       width: 100%;
       height: 100px;
-      background-color: #465258;
+      background-color: #24252a;
       text-align: center;
   
       .name-span {
         margin-left: 10px;
         font-weight: 800;
+      }
+
+      .name-span::before {
+        content: "Traine";
       }
     }
   }

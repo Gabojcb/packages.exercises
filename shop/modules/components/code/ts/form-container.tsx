@@ -9,7 +9,7 @@ interface IForm {
   category: string;
 }
 
-export /*bundle*/ const ProductForm = () => {
+export /*bundle*/ const FormContainer = () => {
   const specs: IForm = {
     name: "",
     price: "",
@@ -38,10 +38,27 @@ export /*bundle*/ const ProductForm = () => {
   };
 
   return (
-    <article>
-      <h2 className="form__description">Add your product data</h2>
+    <article className="container-flex__form">
+      <section className="background-left">
+        <h2 className="form__description">Add your product data</h2>
+
+        <ol className="list-guie">
+          {"what should i write? "}
+
+          <li className="ul__li-list">&#x1f536; 1.add the name of your product &#x2714;&#xfe0f;</li>
+          <li className="ul__li-list">&#x1f536; 2.specify your price &#x2714;&#xfe0f;</li>
+          <li className="ul__li-list">&#x1f536; 3.what brand is it &#x2714;&#xfe0f;</li>
+          <li className="ul__li-list">&#x1f536; 4.your address by src &#x2714;&#xfe0f;</li>
+          <li className="ul__li-list">&#x1f536; 5.and the corresponding category &#x2714;&#xfe0f;</li>
+        </ol>
+      </section>
 
       <form className="form__products" onSubmit={handleVerifyData}>
+        <section className="container-logo-flex">
+          <p className="form__p">¡CREATE YOUR PRODUCT NOW!</p>
+          <img src="images/votacion-en-linea.png" className="form__images-logo" alt="images the form" />
+        </section>
+
         <section>
           <label className="description">Name</label>
           <input

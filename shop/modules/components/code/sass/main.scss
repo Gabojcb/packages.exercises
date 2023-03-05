@@ -4,10 +4,12 @@
     align-items: center;
     justify-content: center;
      margin: 100px auto;
+     margin-bottom: 0;
 
      .text-primary {
         font-size: 39px;
         font-weight: 700;
+        text-shadow: 7px 9px 12px rgb(19, 69, 233);
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
      }
 }

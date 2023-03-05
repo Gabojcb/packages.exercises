@@ -6,11 +6,11 @@ interface IProduct {
   brand: string;
   price: string;
   src: string;
-  category: string;
+  categorie: string;
 }
 
 export /*bundle*/ const Product = (props: IProduct) => {
-  const { name, brand, price, src, category } = props;
+  const { name, brand, price, src, categorie } = props;
   return (
     <div className="container">
       <div className="product">
@@ -25,7 +25,7 @@ export /*bundle*/ const Product = (props: IProduct) => {
             Brand: <span className="key-product">{brand}</span>
           </p>
           <p className="data">
-            Categorie: <span className="key-product">{category}</span>
+            Categorie: <span className="key-product">{categorie}</span>
           </p>
           <p className="data">
             Price: <span className="key-product">{price}</span>

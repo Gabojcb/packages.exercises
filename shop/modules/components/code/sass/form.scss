@@ -1,45 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Tilt+Warp&display=swap');
+
 .form__container {
-    
+
     margin: auto;
     place-items: center;
-    height: 600px;
-    max-width: 800px;
+    height: 700px;
+    max-width: 900px;
 
     article {
-        display: grid;
-        place-items: center;
+        display: flex;
+        flex-direction: row;
+
         border: 2px solid #000000;
         height: 100%;
         width: 100%;
         border-radius: 14px;
-        background-color: #f7e984;
+        background-color: #fff;
 
-        h2 {
-            font-size: 28px;
-            border-bottom: 2px solid;
-        }
+        .background-left {
+            background-image: url(images/e-commerce.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 50% 100%;
+            background-color: rgb(76, 136, 214);
+            width: 50%;
+            text-align: center;
+            padding: 20px;
 
-        form {
-            font-size: 22px;
-            display: grid; 
+                h2 {
+                    font-size: 36px;
+                    font-weight: 800;
+                    font-family: 'Cutive Mono', monospace;
+                    color: #24252a;
+                }
 
-            >section {
-                    display: grid;
-                    grid-template-columns: 200px 1fr;
-                    gap: 1rem;
-                    padding: 0.5rem 0;
-            
-                    input {
-                        padding: .5rem;
-                        font-size: 18px;
-                        height: 50px;
-                        border: 2px solid;
-                        border-radius: 11px;
-                        width: 100%;
+                .list-guie {
+                    display: flex;
+                    color: #24252a;
+                    font-weight: 700;
+                    font-style: italic;
+                    flex-direction: column;
+                    justify-content: left;
+                    align-items: flex-start;
+                    font-size: 20px;
+                    margin-top: 30px;
+
+                    .ul__li-list {
+                        font-size: 12px;
+                        color: #24252a;
+                        padding: 14px;
+                        margin: 0;
                     }
                 }
         }
 
+        form {
+            font-size: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            font-size: 18px;
+
+            .container-logo-flex {
+                display: flex;
+                flex-direction: column-reverse;
+
+                >p {
+                    margin: 0;
+                    font-weight: 900;
+                }
+            }
+
+            .form__images-logo {
+                height: 100px;
+                margin-bottom: 40px;
+            }
+
+            >section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem 0;
+                text-align: left;
+
+                input {
+                    padding: .5rem;
+                    font-size: 16px;
+                    height: 50px;
+                    border: 2px solid;
+                    border-radius: 11px;
+                    width: 130%;
+                }
+            }
+        }
+        
         button {
             margin-top: 20px;
             height: 40px;
@@ -49,6 +106,7 @@
             transition: all .4s;
             font-weight: 700;
             color: #fff;
+            width: 70%;
 
             &:hover {
                 background-color: #24252a;

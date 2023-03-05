@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { Product } from "./component-product";
-import { ProductForm } from "./product-form";
+import { FormContainer } from "./form-container";
 
 interface IProducts {
   key: string;
@@ -9,7 +9,7 @@ interface IProducts {
   brand: string;
   price: string;
   src: string;
-  category: string;
+  categorie: string;
 }
 
 export /*bundle*/ const Navigation = () => {
@@ -26,15 +26,6 @@ export /*bundle*/ const Navigation = () => {
     getDataWithFetch();
   }, []);
 
-  const specs: IProducts = {
-    key: "",
-    product: "",
-    price: "",
-    src: "",
-    brand: "",
-    category: "",
-  };
-
   const getProductsByCategory = (category) => products.filter((product) => product.category === category);
 
   const handleCategoryClick = (category) => setComponentProduct(category);
@@ -47,7 +38,7 @@ export /*bundle*/ const Navigation = () => {
         brand={product.brand}
         price={product.price}
         src={product.src}
-        category={product.category}
+        categorie={product.categorie}
       />
     ));
 
@@ -57,17 +48,17 @@ export /*bundle*/ const Navigation = () => {
     <>
       <nav>
         <div className="container__logo">
-          <p className="logo-shop color">Shop Real </p>
+          <p className="logo-shop color">SHOP REAL </p>
           <img src="images/images-shop-real/cart.png" className="logo-cart" alt="images cart" />
           <input type="text" className="input-searc" placeholder="search" />
         </div>
         <ul className="cont-ul">
-          <li>Menu</li>
+          <li>MENU</li>
           <li className="nav__products">
-            Products
+            PRODUCTS
             <ul className="ul-second color">
               <li className="categories">
-                Categories
+                CATEGORY
                 <ul className="ul-third">
                   {["foods", "drinks", "clothes", "balls", "telephones", "consoles", "home", "tools"].map(
                     (category) => (
@@ -81,12 +72,12 @@ export /*bundle*/ const Navigation = () => {
             </ul>
           </li>
           <li className="color" onClick={handleClickChange}>
-            Add Products
+            ADD PRODUCTS
           </li>
         </ul>
       </nav>
       <div className="flex-product">{componentProduct && getProductComponentsByCategory(componentProduct)}</div>
-      <div className="form__container">{isCLicked === true && <ProductForm />}</div>
+      <div className="form__container">{isCLicked === true && <FormContainer />}</div>
     </>
   );
 };
