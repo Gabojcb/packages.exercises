@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { Product } from "./component-product";
 import { FormContainer } from "./form-container";
 
+//Arreglar problema
+
 interface IProducts {
   key: string;
   product: string;
