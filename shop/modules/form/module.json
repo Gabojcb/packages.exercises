@@ -1,22 +1,22 @@
 {
-  "name": "home",
+  "name": "form",
   "widget": {
+    "route": "/form",
     "is": "page",
-    "route": "/home",
-    "element": {
-      "name": "home-page"
-    },
     "sass": {
-      "path": "sass",
+      "path": "/widget/sass",
       "files": [
         "*"
       ]
     },
     "ts": {
-      "path": "ts",
+      "path": "/widget/ts",
       "files": [
         "*"
       ]
+    },
+    "element": {
+      "name": "app-form"
     }
   }
 }

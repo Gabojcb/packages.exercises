@@ -1,0 +1,51 @@
+.recommendations-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    position: relative;
+    top: 800px;
+    // margin-top: 800px;
+    margin-bottom: 0;
+
+    .recommendations__h2 {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .recommendations-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 90px;
+        .recommendations {
+            display: flex;
+            text-align: center;
+            height: 400px;
+            width: 30%;
+            flex-direction: column;
+
+            .recommendations__img {
+                height: 130px;
+                border: 8px solid;
+                border-radius: 80px;
+            }
+
+            .recommendations__p {
+                margin-top: 10px;
+                color: rgb(99, 94, 94);
+                text-indent: 9px;
+                font-size: 18px;
+            }
+
+            .recommendations__span {
+                margin-top: 20px;
+                font-size: 20px;
+
+                >strong {
+                    color: #008849;
+                }
+            }
+        }
+    }
+}

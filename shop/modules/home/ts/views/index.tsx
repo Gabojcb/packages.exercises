@@ -1,91 +1,77 @@
 import * as React from "react";
-import AdvertisingFrame from "./advertising-frame";
-import { Navigation, Main } from "shop/components";
+import { Navigation, FooterSection, Recommendations } from "shop/components";
 
 export /*bundle*/
 function Page(): JSX.Element {
+  const srcImg = {
+    img1: "images/images-recommendations/men-testimonio.png",
+    img2: "images/images-recommendations/girl-testimonio.png",
+    img3: "images/images-recommendations/woman-testimonio.png",
+  };
+
   return (
     <>
-      <div className="images-url">
-        <Navigation />
-        <AdvertisingFrame />
-        <Main />
-      </div>
-      <footer className="container__footer" id="footer-id">
-        <div className="info__footer">
-          <p className="message__infor">CONTACT</p>
-        </div>
-        <div className="space-networks">
-          <section className="sing-up">
-            <div>
-              <h2>Let's be honest</h2>
-              <p>You have to enter your email if you want to receive offer notifications</p>
+      <Navigation />
+      <main>
+        <section className="services-container">
+          <div className="services__div-info">
+            <h2 className="services__h2">Business Services For Companies</h2>
+            <div className="container-p">
+              <p className="services__p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sem ex, vulputate ut dui a, lacinia
+                semper metus. Aenean porta porttitor urna, vitae pretium sem Donec in nunc elit. Duis magna metus,
+                tincidunt eget fermentum non, ultricies at odio. Quisque vitae mi in ante ullamcorper viverra fermentum
+                nec nunc. Nulla facilisi
+              </p>
             </div>
-            <input type="email" placeholder="jhondoe@gmail.com" />
-            <button>to subscribe</button>
-          </section>
+            <div className="services__statistics">
+              <p className="statistics__p">Safe Delivery 100%</p>
+              <div className="percentage one"></div>
+            </div>
+            <div className="services__statistics">
+              <p className="statistics__p">Opportunity Spotting 76%</p>
+              <div className="percentage two"></div>
+            </div>
+            <div className="services__statistics">
+              <p className="statistics__p">Online Marketing 90%</p>
+              <div className="percentage three"></div>
+            </div>
+          </div>
+          <div className="services__images">
+            <img className="services__img" src="images/images-services/services.jpg" alt="images services" />
+          </div>
+        </section>
 
-          <section className="links">
-            <div className="footer__info">
-              <h3>SERVICES</h3>
-              <p>Gift Card</p>
-              <p>Mobile App</p>
-              <p>Shipping & Delivery</p>
-              <p>Order Pickup</p>
-              <p>Account Signup</p>
-              <p>Shop by location</p>
-              <p>Idea & Guides</p>
-            </div>
+        <section className="recommendations-container">
+          <h2 className="recommendations__h2">Read Customer Testimonials</h2>
+          <div className="recommendations-flex">
+            <Recommendations
+              src={srcImg.img1}
+              alt="testimonio men"
+              paragraph="tincidunt eget fermentum non, ultricies at odio. Quisque vitae mi in ante ullamcorper viverra fermentum nec nunc. Nulla facilisi. Suspendisse aliquam ex arcu, at mollis magna bibendum in"
+              name="Suspendisse"
+              job="Pretium"
+            />
 
-            <div className="footer__info">
-              <h3>ABOUT</h3>
-              <p>about shopcart</p>
-              <p>carrerts</p>
-              <p>New & Blog</p>
-              <p>Help</p>
-              <p>Press Center</p>
-              <p>Shop by location</p>
-              <p>Idea & Guides</p>
-            </div>
+            <Recommendations
+              src={srcImg.img2}
+              alt="testimonio girl"
+              paragraph="Proin elementum odio tellus, eget fermentum tortor interdum nec. Mauris pulvinar mattis libero, vel vehicula magna laoreet nec. Pellentesque massa erat, tempor vitae vehicula ac"
+              name="Aenean "
+              job="Pellentesque "
+            />
 
-            <div className="footer__info">
-              <h3>HELP</h3>
-              <p>Shopcart Help</p>
-              <p>Return</p>
-              <p>track orders</p>
-              <p>contact us</p>
-              <p>feedback</p>
-              <p>sadasdasd</p>
-              <p>Security & fraud</p>
-            </div>
-          </section>
-
-          <section className="networks">
-            <div className="networks__flex-row">
-              <img src="images/images-networks/facebook.png" className="networks__logo" alt="facebook logo" />
-              <p>Shop Real</p>
-            </div>
-
-            <div className="networks__flex-row">
-              <img src="images/images-networks/instagram.png" className="networks__logo" alt="instagram logo" />
-              <p>shopreal</p>
-            </div>
-
-            <div className="networks__flex-row">
-              <img src="images/images-networks/twitter.png" className="networks__logo" alt="twitter logo" />
-              <p>Shop Real</p>
-            </div>
-
-            <div className="networks__flex-row">
-              <img src="images/images-networks/whatsapp.png" className="networks__logo" alt="whatsapp logo" />
-              <p>0-3333-222-99</p>
-            </div>
-          </section>
-        </div>
-        <div className="rights">
-          all rights reserved to <span className="name-span"> GaboDeveloper</span>
-        </div>
-      </footer>
+            <Recommendations
+              src={srcImg.img3}
+              alt="testimonio woman"
+              paragraph=" Donec porta nisi ut tellus laoreet aliquet. Sed iaculis dolor justo, ut ornare turpis porttitor vitae. Vivamus faucibus sem at faucibus ultrices"
+              name="Vestibulum"
+              job="Quisque "
+            />
+          </div>
+        </section>
+      </main>
+      <FooterSection />
     </>
   );
 }
